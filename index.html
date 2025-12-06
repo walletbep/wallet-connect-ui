@@ -1,1 +1,32 @@
-<html><body><h1>WalletConnect Windows Version</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glass WalletConnect</title>
+
+  <!-- Ethers.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+
+  <!-- WalletConnect -->
+  <script src="https://unpkg.com/@walletconnect/modal/dist/index.umd.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="icon">⚡</div>
+    <h1 class="title">Connect Your Wallet</h1>
+
+    <button id="connectBtn" class="glow-btn">Connect Wallet (QR)</button>
+
+    <p id="address" class="info"></p>
+    <p id="balance" class="info"></p>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

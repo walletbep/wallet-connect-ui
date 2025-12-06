@@ -1,1 +1,62 @@
-body { background: black; color: white; }
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #2a014b, #0b0019);
+  font-family: 'Arial';
+  color: white;
+}
+
+.card {
+  width: 350px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 35px rgba(120, 0, 255, 0.4);
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.icon {
+  font-size: 60px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 25px #9f4bff;
+}
+
+.title {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.glow-btn {
+  background: linear-gradient(135deg, #7a2bff, #b666ff);
+  padding: 15px 30px;
+  border: none;
+  border-radius: 14px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 18px;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(176, 0, 255, 0.6);
+}
+
+.glow-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(176, 0, 255, 0.9);
+}
+
+.info {
+  margin-top: 15px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
