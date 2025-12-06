@@ -2,43 +2,38 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>Full Multichain dApp</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>WalletConnect v2 dApp</title>
+
+  <!-- Load WalletConnect Local Loader -->
+  <script src="walletconnect-loader.js"></script>
+
+  <!-- Ethers.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.8.1/ethers.umd.min.js"></script>
+
+  <style>
+    body { background:#0b0f26; color:white; text-align:center; font-family:Arial; }
+    #connectBtn {
+      padding:14px 28px; background:#4c8cff; border:none; font-size:20px;
+      border-radius:10px; cursor:pointer; margin-top:40px;
+    }
+    #dashboard {
+      margin-top:30px; background:#111936; padding:20px;
+      display:none; width:350px; margin-left:auto; margin-right:auto;
+      border-radius:12px;
+    }
+  </style>
 </head>
+
 <body>
+  <h1>Premium WalletConnect v2 dApp</h1>
+  <button id="connectBtn">Connect Wallet</button>
 
-<div class="main-container">
-  <h1 class="title">Premium Multichain Wallet dApp</h1>
-
-  <button id="connectBtn" class="connect-btn">Connect Wallet</button>
-
-  <div id="dashboard" class="dashboard" style="display:none;">
-    <h2>Wallet Dashboard</h2>
-    <p><strong>Address:</strong> <span id="addr"></span></p>
-    <p><strong>Chain:</strong> <span id="chain"></span></p>
-    <p><strong>Native Balance:</strong> <span id="bal"></span></p>
-
-    <h3>Token Balance</h3>
-    <input id="tokenAddress" placeholder="Enter Token Contract Address" />
-    <button id="fetchTokenBtn">Fetch Token Balance</button>
-    <p><span id="tokenBal"></span></p>
-
-    <h3>Token Price</h3>
-    <input id="tokenId" placeholder="CoinGecko Token ID (e.g. ethereum)" />
-    <button id="fetchPriceBtn">Fetch Price</button>
-    <p><span id="tokenPrice"></span></p>
+  <div id="dashboard">
+    <p><b>Address:</b> <span id="addr"></span></p>
+    <p><b>Chain:</b> <span id="chain"></span></p>
+    <p><b>Balance:</b> <span id="bal"></span></p>
   </div>
 
-  <div id="swap" class="swap-box" style="display:none;">
-    <h2>Swap UI (Frontend Only)</h2>
-    <input id="fromAmount" placeholder="Amount From" />
-    <input id="toAmount" placeholder="Amount To" />
-    <p>UI only – no backend swaps</p>
-  </div>
-
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.8.1/ethers.umd.min.js"></script>
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
